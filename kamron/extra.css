@@ -1,0 +1,57 @@
+/* Rasm ramkasi */
+.photo-frame {
+  width: clamp(240px, 28vw, 340px);
+  height: clamp(240px, 28vw, 340px);
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 6px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  box-shadow: 0 0 80px rgba(99, 102, 241, 0.45);
+  animation: float 6s ease-in-out infinite;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 50%;
+}
+
+/* Orzular bo'limi */
+.dream-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.dream-card {
+  background: var(--card);
+  padding: 40px 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--accent);
+  transition: var(--transition);
+}
+
+.dream-card:hover { transform: translateY(-8px); }
+
+.dream-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.dream-card p { color: var(--muted); }
+
+/* Yutuq kartalarida rasm o'rniga matn kattaroq */
+.project-image span { font-size: 1.6rem; }
+
+/* Yutuq rasmlari */
+.project-image { padding: 0; }
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
